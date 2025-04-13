@@ -1,0 +1,113 @@
+\doxysection{Edge Class Reference}
+\hypertarget{class_edge}{}\label{class_edge}\index{Edge@{Edge}}
+
+
+Ребро, соединяющее две точки (p1 и p2).  
+
+
+
+
+{\ttfamily \#include $<$triang.\+h$>$}
+
+
+
+Collaboration diagram for Edge\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_edge_a0184a4d49c6c37c6ca7014c81fb733bf}{Edge}} (const \mbox{\hyperlink{struct_point}{Point}} \&point1, const \mbox{\hyperlink{struct_point}{Point}} \&point2)
+\begin{DoxyCompactList}\small\item\em Конструктор ребра. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_edge_ab6a06c5da57efed1991960f61e870c8b}{operator$<$}} (const \mbox{\hyperlink{class_edge}{Edge}} \&other) const
+\begin{DoxyCompactList}\small\item\em Оператор сравнения для сортировки рёбер. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_edge_ab6c35dc1902b8eb155fb0194a2afcdb1}{operator==}} (const \mbox{\hyperlink{class_edge}{Edge}} \&other) const
+\begin{DoxyCompactList}\small\item\em Проверка на равенство рёбер (без учёта порядка точек). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{class_edge_a9cb958550d6ca42fd7122235d64898c9}{p1}}
+\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{class_edge_a0867d7b428491ef61eb90b540a73db1d}{p2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ребро, соединяющее две точки (p1 и p2). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_edge_a0184a4d49c6c37c6ca7014c81fb733bf}\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}}
+{\footnotesize\ttfamily \label{class_edge_a0184a4d49c6c37c6ca7014c81fb733bf} 
+Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \&}]{point1}{, }\item[{const \mbox{\hyperlink{struct_point}{Point}} \&}]{point2}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор ребра. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point1} & Первая точка. \\
+\hline
+{\em point2} & Вторая точка. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_edge_ab6a06c5da57efed1991960f61e870c8b}\index{Edge@{Edge}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{class_edge_ab6a06c5da57efed1991960f61e870c8b} 
+bool Edge\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_edge}{Edge}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Оператор сравнения для сортировки рёбер. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Другое ребро. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если текущее ребро меньше other. 
+\end{DoxyReturn}
+\Hypertarget{class_edge_ab6c35dc1902b8eb155fb0194a2afcdb1}\index{Edge@{Edge}!operator==@{operator==}}
+\index{operator==@{operator==}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_edge_ab6c35dc1902b8eb155fb0194a2afcdb1} 
+bool Edge\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_edge}{Edge}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверка на равенство рёбер (без учёта порядка точек). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Другое ребро. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если рёбра равны. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_edge_a9cb958550d6ca42fd7122235d64898c9}\index{Edge@{Edge}!p1@{p1}}
+\index{p1@{p1}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{p1}{p1}}
+{\footnotesize\ttfamily \label{class_edge_a9cb958550d6ca42fd7122235d64898c9} 
+\mbox{\hyperlink{struct_point}{Point}} Edge\+::p1}
+
+\Hypertarget{class_edge_a0867d7b428491ef61eb90b540a73db1d}\index{Edge@{Edge}!p2@{p2}}
+\index{p2@{p2}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{p2}{p2}}
+{\footnotesize\ttfamily \label{class_edge_a0867d7b428491ef61eb90b540a73db1d} 
+\mbox{\hyperlink{struct_point}{Point}} Edge\+::p2}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{triang_8h}{triang.\+h}}\end{DoxyCompactItemize}

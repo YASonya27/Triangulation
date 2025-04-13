@@ -1,0 +1,70 @@
+\doxysection{server.\+cpp File Reference}
+\hypertarget{server_8cpp}{}\label{server_8cpp}\index{server.cpp@{server.cpp}}
+
+
+Сервер для обработки триангуляции данных, полученных от клиента  
+
+
+{\ttfamily \#include "{}triang.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$winsock2.\+h$>$}\newline
+{\ttfamily \#include $<$ws2tcpip.\+h$>$}\newline
+Include dependency graph for server.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Автоматическая линковка библиотеки Winsock \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Сервер для обработки триангуляции данных, полученных от клиента 
+
+Сервер принимает от клиента количество точек, генерирует случайные точки, выполняет их триангуляцию и отправляет результат обратно клиенту. Использует Winsock для сетевого взаимодействия. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{server.cpp@{server.cpp}!main@{main}}
+\index{main@{main}!server.cpp@{server.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\texorpdfstring{$<$}{<} Автоматическая линковка библиотеки Winsock 
+
+Основная функция сервера \begin{DoxyReturn}{Returns}
+0 при успешном завершении 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Последовательность работы\+:
+\begin{DoxyEnumerate}
+\item Инициализация Winsock
+\item Создание и настройка сокета
+\item Ожидание подключения клиента
+\item Получение данных от клиента и обработка
+\item Завершение работы 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+\texorpdfstring{$<$}{<} Структура для инициализации Winsock
+
+\texorpdfstring{$<$}{<} Дескрипторы сокетов
+
+\texorpdfstring{$<$}{<} Структуры адресов
+
+\texorpdfstring{$<$}{<} Размер структуры адреса клиента
+
+\texorpdfstring{$<$}{<} Принимаем соединения на все интерфейсы
+
+\texorpdfstring{$<$}{<} Порт 8080
+
+\texorpdfstring{$<$}{<} Код завершения работы
+
+\texorpdfstring{$<$}{<} X-\/координата (1.\+0..5.\+0)
+
+\texorpdfstring{$<$}{<} Y-\/координата (1.\+0..5.\+0)
+
+\texorpdfstring{$<$}{<} Запись рёбер в файл
+
+\texorpdfstring{$<$}{<} Код успешного выполнения

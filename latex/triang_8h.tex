@@ -1,0 +1,154 @@
+\doxysection{triang.\+h File Reference}
+\hypertarget{triang_8h}{}\label{triang_8h}\index{triang.h@{triang.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for triang.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_point}{Point}}
+\begin{DoxyCompactList}\small\item\em Точка в 2D-\/пространстве с координатами x и y. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_edge}{Edge}}
+\begin{DoxyCompactList}\small\item\em Ребро, соединяющее две точки (p1 и p2). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{triang_8h_aeeb75842afb0392b17e10ecca64063f1}{min}} (\mbox{\hyperlink{struct_point}{Point}} a, \mbox{\hyperlink{struct_point}{Point}} b)
+\begin{DoxyCompactList}\small\item\em Возвращает минимальную из двух точек (по координатам). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{triang_8h_ada259135840d5eace627e9b4e1fced2a}{max}} (\mbox{\hyperlink{struct_point}{Point}} a, \mbox{\hyperlink{struct_point}{Point}} b)
+\begin{DoxyCompactList}\small\item\em Возвращает максимальную из двух точек (по координатам). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{triang_8h_a3ed73f3c752bdd1349d9382109dc87a0}{write\+Edges\+To\+File}} (const std\+::set$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ \&edges)
+\begin{DoxyCompactList}\small\item\em Записывает рёбра в файл "{}points.\+txt"{}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{triang_8h_aee8cdb7363b4c9522c39bda0063e52dd}{orientation}} (\mbox{\hyperlink{struct_point}{Point}} p, \mbox{\hyperlink{struct_point}{Point}} q, \mbox{\hyperlink{struct_point}{Point}} r)
+\begin{DoxyCompactList}\small\item\em Определяет ориентацию трёх точек. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{triang_8h_ae78e4435cab29b8106ff35caacc19fa0}{cross}} (\mbox{\hyperlink{class_edge}{Edge}} e, \mbox{\hyperlink{struct_point}{Point}} p1, \mbox{\hyperlink{struct_point}{Point}} p2)
+\begin{DoxyCompactList}\small\item\em Проверяет, пересекает ли ребро e отрезок между p1 и p2. \end{DoxyCompactList}\item 
+std\+::set$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ \mbox{\hyperlink{triang_8h_ad561c0be4a310cbb9448b3361ad187c4}{triangulate}} (std\+::vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \&points)
+\begin{DoxyCompactList}\small\item\em Триангуляция множества точек. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{triang_8h_ae78e4435cab29b8106ff35caacc19fa0}\index{triang.h@{triang.h}!cross@{cross}}
+\index{cross@{cross}!triang.h@{triang.h}}
+\doxysubsubsection{\texorpdfstring{cross()}{cross()}}
+{\footnotesize\ttfamily \label{triang_8h_ae78e4435cab29b8106ff35caacc19fa0} 
+int cross (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}}}]{e}{, }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{p1}{, }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{p2}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет, пересекает ли ребро e отрезок между p1 и p2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Ребро. \\
+\hline
+{\em p1} & Первая точка отрезка. \\
+\hline
+{\em p2} & Вторая точка отрезка. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если пересекает, 0 — если нет. 
+\end{DoxyReturn}
+\Hypertarget{triang_8h_ada259135840d5eace627e9b4e1fced2a}\index{triang.h@{triang.h}!max@{max}}
+\index{max@{max}!triang.h@{triang.h}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily \label{triang_8h_ada259135840d5eace627e9b4e1fced2a} 
+\mbox{\hyperlink{struct_point}{Point}} max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{a}{, }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает максимальную из двух точек (по координатам). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Первая точка. \\
+\hline
+{\em b} & Вторая точка. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Точка с большими координатами. 
+\end{DoxyReturn}
+\Hypertarget{triang_8h_aeeb75842afb0392b17e10ecca64063f1}\index{triang.h@{triang.h}!min@{min}}
+\index{min@{min}!triang.h@{triang.h}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily \label{triang_8h_aeeb75842afb0392b17e10ecca64063f1} 
+\mbox{\hyperlink{struct_point}{Point}} min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{a}{, }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{b}{}\end{DoxyParamCaption})}
+
+
+
+Возвращает минимальную из двух точек (по координатам). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Первая точка. \\
+\hline
+{\em b} & Вторая точка. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Точка с меньшими координатами. 
+\end{DoxyReturn}
+\Hypertarget{triang_8h_aee8cdb7363b4c9522c39bda0063e52dd}\index{triang.h@{triang.h}!orientation@{orientation}}
+\index{orientation@{orientation}!triang.h@{triang.h}}
+\doxysubsubsection{\texorpdfstring{orientation()}{orientation()}}
+{\footnotesize\ttfamily \label{triang_8h_aee8cdb7363b4c9522c39bda0063e52dd} 
+int orientation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{p}{, }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{q}{, }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{r}{}\end{DoxyParamCaption})}
+
+
+
+Определяет ориентацию трёх точек. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Первая точка. \\
+\hline
+{\em q} & Вторая точка. \\
+\hline
+{\em r} & Третья точка. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1, если по часовой стрелке, 2 — против. 
+\end{DoxyReturn}
+\Hypertarget{triang_8h_ad561c0be4a310cbb9448b3361ad187c4}\index{triang.h@{triang.h}!triangulate@{triangulate}}
+\index{triangulate@{triangulate}!triang.h@{triang.h}}
+\doxysubsubsection{\texorpdfstring{triangulate()}{triangulate()}}
+{\footnotesize\ttfamily \label{triang_8h_ad561c0be4a310cbb9448b3361ad187c4} 
+std\+::set$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ triangulate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{struct_point}{Point}} $>$ \&}]{points}{}\end{DoxyParamCaption})}
+
+
+
+Триангуляция множества точек. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em points} & Вектор точек для триангуляции. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Множество рёбер триангуляции. 
+\end{DoxyReturn}
+\Hypertarget{triang_8h_a3ed73f3c752bdd1349d9382109dc87a0}\index{triang.h@{triang.h}!writeEdgesToFile@{writeEdgesToFile}}
+\index{writeEdgesToFile@{writeEdgesToFile}!triang.h@{triang.h}}
+\doxysubsubsection{\texorpdfstring{writeEdgesToFile()}{writeEdgesToFile()}}
+{\footnotesize\ttfamily \label{triang_8h_a3ed73f3c752bdd1349d9382109dc87a0} 
+void write\+Edges\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::set$<$ \mbox{\hyperlink{class_edge}{Edge}} $>$ \&}]{edges}{}\end{DoxyParamCaption})}
+
+
+
+Записывает рёбра в файл "{}points.\+txt"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em edges} & Множество рёбер для записи. \\
+\hline
+\end{DoxyParams}

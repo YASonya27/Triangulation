@@ -1,0 +1,107 @@
+\doxysection{Point Struct Reference}
+\hypertarget{struct_point}{}\label{struct_point}\index{Point@{Point}}
+
+
+Точка в 2D-\/пространстве с координатами x и y.  
+
+
+
+
+{\ttfamily \#include $<$triang.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_point_a6a306c072ba949017332d99b87e73db8}{operator$<$}} (const \mbox{\hyperlink{struct_point}{Point}} \&other) const
+\begin{DoxyCompactList}\small\item\em Оператор сравнения для сортировки точек. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_point_a3a6e3ab3998a4e26c11736cbdbc832ac}{operator!=}} (const \mbox{\hyperlink{struct_point}{Point}} \&other) const
+\begin{DoxyCompactList}\small\item\em Проверка на неравенство точек. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_point_a9c29cd36d1ce448b8e1e56a204fe2b95}{operator==}} (const \mbox{\hyperlink{struct_point}{Point}} \&other) const
+\begin{DoxyCompactList}\small\item\em Проверка на равенство точек. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{struct_point_ab99c56589bc8ad5fa5071387110a5bc7}{x}}
+\item 
+double \mbox{\hyperlink{struct_point_afa38be143ae800e6ad69ce8ed4df62d8}{y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Точка в 2D-\/пространстве с координатами x и y. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_point_a3a6e3ab3998a4e26c11736cbdbc832ac}\index{Point@{Point}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_point_a3a6e3ab3998a4e26c11736cbdbc832ac} 
+bool Point\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверка на неравенство точек. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Другая точка для сравнения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если точки не равны. 
+\end{DoxyReturn}
+\Hypertarget{struct_point_a6a306c072ba949017332d99b87e73db8}\index{Point@{Point}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{struct_point_a6a306c072ba949017332d99b87e73db8} 
+bool Point\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Оператор сравнения для сортировки точек. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Другая точка для сравнения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если текущая точка меньше other. 
+\end{DoxyReturn}
+\Hypertarget{struct_point_a9c29cd36d1ce448b8e1e56a204fe2b95}\index{Point@{Point}!operator==@{operator==}}
+\index{operator==@{operator==}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_point_a9c29cd36d1ce448b8e1e56a204fe2b95} 
+bool Point\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_point}{Point}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Проверка на равенство точек. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Другая точка для сравнения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если точки равны. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_point_ab99c56589bc8ad5fa5071387110a5bc7}\index{Point@{Point}!x@{x}}
+\index{x@{x}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{struct_point_ab99c56589bc8ad5fa5071387110a5bc7} 
+double Point\+::x}
+
+\Hypertarget{struct_point_afa38be143ae800e6ad69ce8ed4df62d8}\index{Point@{Point}!y@{y}}
+\index{y@{y}!Point@{Point}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{struct_point_afa38be143ae800e6ad69ce8ed4df62d8} 
+double Point\+::y}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{triang_8h}{triang.\+h}}\end{DoxyCompactItemize}

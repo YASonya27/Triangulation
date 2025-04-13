@@ -1,0 +1,59 @@
+\doxysection{client.\+cpp File Reference}
+\hypertarget{client_8cpp}{}\label{client_8cpp}\index{client.cpp@{client.cpp}}
+
+
+Клиент для взаимодействия с сервером триангуляции  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$winsock2.\+h$>$}\newline
+{\ttfamily \#include $<$ws2tcpip.\+h$>$}\newline
+Include dependency graph for client.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Автоматическая линковка с библиотекой Winsock \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Клиент для взаимодействия с сервером триангуляции 
+
+Клиент подключается к серверу, отправляет количество точек для триангуляции и получает подтверждение обработки. Использует Winsock для сетевого взаимодействия. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{client.cpp@{client.cpp}!main@{main}}
+\index{main@{main}!client.cpp@{client.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{client_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\texorpdfstring{$<$}{<} Автоматическая линковка с библиотекой Winsock 
+
+\texorpdfstring{$<$}{<} Основной заголовочный файл Winsock2 Дополнительные функции для работы с TCP/\+IP
+
+Основная функция клиента \begin{DoxyReturn}{Returns}
+0 при успешном завершении, 1 при ошибке подключения 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Алгоритм работы\+:
+\begin{DoxyEnumerate}
+\item Инициализация Winsock
+\item Создание и настройка сокета
+\item Подключение к серверу
+\item Ввод данных и взаимодействие с сервером
+\item Завершение работы 
+\end{DoxyEnumerate}
+\end{DoxyNote}
+\texorpdfstring{$<$}{<} Структура для инициализации Winsock
+
+\texorpdfstring{$<$}{<} Дескриптор клиентского сокета
+
+\texorpdfstring{$<$}{<} Структура адреса сервера
+
+\texorpdfstring{$<$}{<} Семейство адресов IPv4
+
+\texorpdfstring{$<$}{<} Порт сервера 8080
